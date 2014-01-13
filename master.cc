@@ -46,12 +46,6 @@ int main()
         std::cout << "Math check - Correct" << std::endl;
     }
     
-    /*
-    if((y==c*-1)&&(x==c*-1)){
-        std::cout << "Math check - Correct" << std::endl;
-    }
-    */
-    
     else{
         std::cout <<"Math check - Wrong.\nRepeating decimals don't check properly.\nWorked: " << x << std::endl;
     }
