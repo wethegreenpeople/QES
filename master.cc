@@ -4,7 +4,7 @@
 
 int main()
 {
-    int x, y = 0;
+    int x1, x2 = 0;
     double a, b, c = 0;
     double answerpos, answerneg;
     double square;
@@ -39,15 +39,15 @@ int main()
     std::cout << square << std::endl;
     */
     
-    y = ((a*answerpos*answerpos)+(b*answerpos));
-    x = ((a*answerneg*answerneg)+(b*answerneg));
+    x1 = ((a*answerpos*answerpos)+(b*answerpos));
+    x2 = ((a*answerneg*answerneg)+(b*answerneg));
     
-    if((y && x == c*-1)){
+    if((x1 && x2 == c*-1)){
         std::cout << "Math check - Correct" << std::endl;
     }
     
     else{
-        std::cout <<"Math check - Wrong.\nRepeating decimals don't check properly.\nWorked: " << x << std::endl;
+        std::cout <<"Math check - Wrong.\nRepeating decimals don't check properly.\nWorked: " << x2 << std::endl;
     }
     
     return 0;
