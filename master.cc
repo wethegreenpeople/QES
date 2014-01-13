@@ -35,6 +35,14 @@ int main()
     x1 = ((a*answerpos*answerpos)+(b*answerpos));
     x2 = ((a*answerneg*answerneg)+(b*answerneg));
     
+    // Checks to see if it's a complex answer
+    if((b*b - (4*a*c) < 0)){
+        std::cout << "\n"
+            << "This is a complex answer, and out of the scope of this program. Please try again with different numbers!" << std::endl;
+        
+        return 0;
+    }
+    
     // Checks to see if there's only one root or not.
     if(answerpos == answerneg){
         std::cout << "\n" 
