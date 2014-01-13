@@ -7,7 +7,7 @@ int main()
     int x1, x2 = 0;
     double a, b, c = 0;
     double answerpos, answerneg;
-    double square;
+    double squareRT;
     
     std::cout << "~~Quadratic Equation Solver~~ \nEnter A, B, and C: ";
     std::cin >> a >> b >> c;
@@ -27,20 +27,35 @@ int main()
     
     
     //Quadratic equation formula. x=-b±(√b^2-4(ac))/2*a
-    square = sqrt(b*b-(4*a*c));
-    answerpos = (-b+square)/(2*a);
-    answerneg = (-b-square)/(2*a);
+    squareRT = sqrt(b*b-(4*a*c));
+    answerpos = (-b+squareRT)/(2*a);
+    answerneg = (-b-squareRT)/(2*a);
     
+    // The math used to check if answers are correct
+    x1 = ((a*answerpos*answerpos)+(b*answerpos));
+    x2 = ((a*answerneg*answerneg)+(b*answerneg));
+    
+    // Checks to see if there's only one root or not.
+    if(answerpos == answerneg){
+        std::cout << "\n" 
+            << "x = " << std::setprecision(3) << answerpos << " (only one root)" << std::endl;
+        
+        if((x1 && x2 == c * -1)){
+            std::cout << "Math check - Correct" << std::endl;
+        }
+        
+        
+        return 0;
+    }
+    
+    // If there's more than one root than they're both outputted here.
     std::cout << "\n" << std::endl;
     std::cout << "x = " << std::setprecision(3) << answerpos << std::endl;
     std::cout << "x = " << std::setprecision(3) << answerneg << std::endl;
     /* 
     Commented out, used for math debugging and stuff.
-    std::cout << square << std::endl;
+    std::cout << squareRT << std::endl;
     */
-    
-    x1 = ((a*answerpos*answerpos)+(b*answerpos));
-    x2 = ((a*answerneg*answerneg)+(b*answerneg));
     
     if((x1 && x2 == c*-1)){
         std::cout << "Math check - Correct" << std::endl;
