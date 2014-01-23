@@ -1,6 +1,7 @@
 #include <iostream>
 #include <math.h>
 #include <iomanip>
+#include <string>
 
 int main()
 {
@@ -73,5 +74,8 @@ int main()
         std::cout <<"Math check - Wrong.\nRepeating decimals don't check properly.\nWorked: " << x2 << std::endl;
     }
     
-    return 0;
+    //Type anything to quit proggie. Added for .exe file. When I learn how, I'll give options to quit, or rerun proggie.
+    std::string quit;
+    std::cin >> quit;
+    
 }
